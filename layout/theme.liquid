@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>{{ page_title }}</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="{{ page_description | escape }}">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  {{ content_for_header }} <!-- Header hook for plugins -->
+  {{ 'app.css' | asset_url | stylesheet_tag }}
+  {{ 'vendor.js' | asset_url | script_tag }}
+</head>
+<body 
+  class="template-{{ template.name | handle }} font-body"
+  data-template="{{ template.name | handle }}"
+>
+  
+  <main role="main">
+    {{ content_for_layout }}
+  </main>
+  
+  {{ 'app.js' | asset_url | script_tag }}
+</body>
+</html>

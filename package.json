@@ -1,0 +1,35 @@
+{
+  "name": "shopify-starter",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Lily Fielding",
+  "scripts": {
+    "development": "mix",
+    "watch": "mix watch",
+    "production": "mix --production",
+    "clean": "rm -rf ./assets/app.css && rm -rf ./assets/app.js && rm -rf ./mix-manifest.json && rm -rf ./assets/vendor.js",
+    "dev": "npm run clean && concurrently \"npm run watch\" \"theme watch --env=development --notify=/var/tmp/theme_ready \" --names \"📦,🛍\" --prefix name",
+    "deploy:prod": "npm run clean && npm run production && theme deploy --env=production --allow-live",
+    "deploy:dev": "npm run clean && npm run production && theme deploy --env=development"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "laravel-mix": "^6.0.11",
+    "mix-tailwindcss": "^1.3.0",
+    "resolve-url-loader": "^3.1.2",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "tailwindcss": "^2.0.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "es6-promise": "^4.2.8",
+    "js-cookie": "^2.2.1",
+    "lazysizes": "^5.2.0",
+    "swiper": "^5.4.0",
+    "tailwindcss": "^1.4.6"
+  }
+}

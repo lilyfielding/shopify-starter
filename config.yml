@@ -1,0 +1,12 @@
+development:
+  password: ${PASSWORD}
+  theme_id: ${DEVELOPMENT}
+  store: ${STORE}
+  ignore_files:
+    - settings_data.json
+production:
+  password: ${PASSWORD}
+  theme_id: ${PRODUCTION}
+  store: ${STORE}
+  ignore_files:
+    - settings_data.json
